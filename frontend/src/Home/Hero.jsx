@@ -1,6 +1,10 @@
 import "../CSS/HomeHero.css";
 
 export default function Hero() {
+  const handleWhatsapp = () => {
+    window.open("https://wa.me/919560526332", "_blank");
+  };
+  
   return (
     <div
       className="hero-section text-white"
@@ -10,8 +14,9 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "2rem",
+        padding: "2rem 2rem 1rem 2rem", // reduced bottom padding
       }}
+      
     >
       <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
         {/* Text Section */}
@@ -24,7 +29,7 @@ export default function Hero() {
           </p>
           <div>
             <button className="btn btn-primary me-3">Hire Me</button>
-            <button className="btn btn-outline-light">Let's Talk</button>
+            <button className="btn btn-outline-light" onClick={handleWhatsapp}>Let's Talk</button>
           </div>
         </div>
 

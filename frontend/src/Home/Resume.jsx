@@ -1,4 +1,5 @@
 import "../CSS/Resume.css";
+import { motion } from "framer-motion";
 
 export default function Resume() {
   const projects = [
@@ -35,12 +36,16 @@ export default function Resume() {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: "#161b22" }}>
+    <section className="pt-3 pb-5" style={{ backgroundColor: "#161b22" }}>
       <div className="container">
         <h2 className="text-center text-white fw-bold mb-5">🚀 My Projects</h2>
         <div className="d-flex flex-column gap-5">
           {projects.map((project, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`row align-items-center ${
                 index % 2 === 0 ? "" : "flex-row-reverse"
               } g-4`}
@@ -52,7 +57,11 @@ export default function Resume() {
                   src={project.image}
                   alt={project.title}
                   className="img-fluid rounded-4 shadow"
-                  style={{ maxHeight: "300px", objectFit: "cover" }}
+                  style={{
+                    maxHeight: index >= 2 ? "350px" : "300px",
+                    width: index >= 2 ? "100%" : "auto",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
 
@@ -68,7 +77,7 @@ export default function Resume() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

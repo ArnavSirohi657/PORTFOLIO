@@ -6,6 +6,7 @@ export default function HomePage() {
         <div>
             <Hero/>
             <Resume/>
+            <br/> <br/>
         </div>
     )
 }
