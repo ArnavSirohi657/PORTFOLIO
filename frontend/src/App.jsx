@@ -4,7 +4,7 @@ import Home from './LandingPage/Home.jsx';
 import About from './LandingPage/About.jsx';
 import Projects from './LandingPage/Projects.jsx';
 import Footer from './Footer/Footer.jsx';
-
+import Pricing from './Pricing/Pricing.jsx';
 export default function App() {
   return (
     <BrowserRouter>
@@ -13,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -1,10 +1,17 @@
 import "../CSS/HomeHero.css";
+import { useNavigate } from "react-router-dom"; // Import navigation hook
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   const handleWhatsapp = () => {
     window.open("https://wa.me/919560526332", "_blank");
   };
-  
+
+  const handlePricing = () => {
+    navigate("/pricing");
+  };
+
   return (
     <div
       className="hero-section text-white"
@@ -14,9 +21,8 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "2rem 2rem 1rem 2rem", // reduced bottom padding
+        padding: "2rem 2rem 1rem 2rem",
       }}
-      
     >
       <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
         {/* Text Section */}
@@ -28,8 +34,12 @@ export default function Hero() {
             Let's turn your product idea into a live, working MVP in days—not weeks.
           </p>
           <div>
-            <button className="btn btn-primary me-3">Hire Me</button>
-            <button className="btn btn-outline-light" onClick={handleWhatsapp}>Let's Talk</button>
+            <button className="btn btn-primary me-3" onClick={handlePricing}>
+              Hire Me
+            </button>
+            <button className="btn btn-outline-light" onClick={handleWhatsapp}>
+              Let's Talk
+            </button>
           </div>
         </div>
 

@@ -3,14 +3,14 @@ import "../CSS/NavBar.css";
 
 export default function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg custom-navbar px-4">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
       <div className="container-fluid">
-        <NavLink className="navbar-brand text-white fw-bold fs-4" to="/">
+        <NavLink className="navbar-brand fw-bold fs-4" to="/">
           Arnav Sirohi
         </NavLink>
 
         <button
-          className="navbar-toggler bg-light"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
@@ -23,13 +23,13 @@ export default function NavBar() {
 
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto gap-4">
-            <NavLink className="nav-link text-white" to="/" end>
+            <NavLink className="nav-link" to="/" end>
               Home
             </NavLink>
-            <NavLink className="nav-link text-white" to="/about">
+            <NavLink className="nav-link" to="/about">
               About
             </NavLink>
-            <NavLink className="nav-link text-white" to="/projects">
+            <NavLink className="nav-link" to="/projects">
               Projects
             </NavLink>
           </div>
